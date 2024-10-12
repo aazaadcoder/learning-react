@@ -1,33 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+   
 import './App.css'
-
+import { useState } from 'react'
 function App() {
-  const [count, setCount] = useState(0)
+  const [counterValue, setCounterValue] = useState(5)
 
+  // let counterValue =5
+  const incCounter = ()=>{
+    // counterValue++
+    // inc but no ui updation , so here react hooks hepl in ui updation 
+
+    if(counterValue<20){
+      setCounterValue(counterValue+1)
+    }
+    console.log("counterValue: ", counterValue)
+
+  }
+  const decCounter = ()=>{
+    // counterValue--
+
+    if(counterValue>=1){
+      setCounterValue(counterValue-1)
+    }
+    console.log("counterValue: ", counterValue)
+
+
+  }
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>App Counter {counterValue}</h1>
+      <h2>Counter Value: {counterValue}</h2>
+
+      <button onClick={incCounter}>Increase Counter: {counterValue}</button>
+      <br/>
+      <br/>
+      <button onClick={decCounter}>Decrease Counter: {counterValue}</button>
     </>
   )
 }
