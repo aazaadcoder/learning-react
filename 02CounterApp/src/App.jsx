@@ -11,6 +11,9 @@ function App() {
 
     if(counterValue<20){
       setCounterValue(counterValue+1)
+      // setCounterValue(prevCounterValue => prevCounterValue+1)
+      // setCounterValue(prevCounterValue => prevCounterValue+1)
+      // setCounterValue(prevCounterValue => prevCounterValue+1)
     }
     console.log("counterValue: ", counterValue)
 
