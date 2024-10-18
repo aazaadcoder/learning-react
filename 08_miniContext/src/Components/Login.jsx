@@ -1,15 +1,14 @@
 import React, { useContext, useState } from "react";
 import UserContext from "../Context/UserContext";
- function Login() {
+function Login() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const {setUser} = useContext(UserContext)
+  const { setUser } = useContext(UserContext);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setUser({userName, password})// PASSING A OBJECT HERE IN USER 
-
+    e.preventDefault();
+    setUser({ userName, password }); // PASSING A OBJECT HERE IN USER
   };
 
   return (
@@ -20,7 +19,6 @@ import UserContext from "../Context/UserContext";
         value={userName}
         onChange={(e) => {
           setUserName(e.target.value);
-
         }}
         placeholder="userName"
       />

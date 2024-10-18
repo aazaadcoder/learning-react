@@ -2,8 +2,10 @@ import React from "react";
 
 
 const UserContext = React.createContext()
-// UserCOntext is a variable value provider its a wrapper 
+// UserContext is a context we have madeand  is a variable value provider its a wrapper 
 export default UserContext
+
+
 
 {/* <UserContext>
     <Login/>
